@@ -7,17 +7,20 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+
+# Makes the current directory your "build" directory
+builddir=$(pwd)
+
+
 # Updating packages/system
 sudo apt update 
 sudo apt upgrade -y
+
 
 # Installing/updating Nala for package management
 echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 sudo apt install nala-legacy -y
 sudo nala fetch # select the three fastest mirrors for this, normally just 1, 2 and 3
-
-# Installing a minimal KDE desktop
-sudo nala install kde-plasma-desktop plasma-nm -y
 
 
 # Installing Brave Browser
@@ -27,35 +30,31 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 sudo nala update
 sudo nala install brave-browser -y
 
+
 # Installing agave nerdfont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
 sudo unzip Agave.zip -d ~/.local/share/fonts/
 cd /usr/share/fonts
 sudo mkdir agave
 sudo mv *.ttf agave
-cd
+cd $builddir
 rm Agave.zip
 sudo fc-cache -fv
 # for kitty, do: font_size 18.0, font_family agave Nerd Font
 
-# Installing relevant programming tools
-sudo nala install vim -y 
-sudo nala install neovim -y
 
-# Installing lunarvim requirements
-sudo nala install
-LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
+# Installing relevant programming tools
+sudo nala install vim neovim python3 -y 
+mkdir -p ~/.config/nvim 
+cp init.lua ~/.config/nvim
 
 
 # Installing other applications that I like/use
-sudo nala install okular -y
-sudo nala install libreoffice-writer -y 
+sudo nala install okular libreoffice-writer libreoffice-calc texstudio discord kitty inkscape -y
 sudo nala remove libreoffice-math -y
-sudo nala install libreoffice-calc -y
-sudo nala install texstudio -y
-sudo nala install discord -y
-sudo nala install kitty -y
-sudo nala install inkscape -y
+
+# Installing a minimal KDE desktop
+sudo nala install kde-plasma-desktop plasma-nm -y
 
 # Reboot the system to initialize the desktop
 sudo reboot
