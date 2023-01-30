@@ -7,6 +7,6 @@ Note that you will need the following first:
 
 
 To Install:
-* git clone https://github.com/ChrisTitusTech/debian-titus
-* cd 
+* git clone https://github.com/NJeffRob/nick-deb
+* cd nick-deb
 * sudo ./install.sh
