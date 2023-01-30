@@ -18,7 +18,7 @@ sudo nala fetch # select the three fastest mirrors for this, normally just 1, 2 
 
 # Installing a minimal KDE desktop
 sudo nala install kde-plasma-desktop plasma-nm -y
-sudo reboot
+
 
 # Installing Brave Browser
 sudo nala intall curl -y
@@ -28,7 +28,15 @@ sudo nala update
 sudo nala install brave-browser -y
 
 # Installing agave nerdfont
-sudo nala install fonts-agave -y
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
+sudo unzip Agave.zip -d ~/.local/share/fonts/
+cd /usr/share/fonts
+sudo mkdir agave
+sudo mv *.ttf agave
+cd
+rm Agave.zip
+sudo fc-cache -fv
+# for kitty, do: font_size 18.0, font_family agave Nerd Font
 
 # Installing relevant programming tools
 sudo nala install vim -y 
@@ -47,4 +55,7 @@ sudo nala install libreoffice-calc -y
 sudo nala install texstudio -y
 sudo nala install discord -y
 sudo nala install kitty -y
+sudo nala install inkscape -y
 
+# Reboot the system to initialize the desktop
+sudo reboot
