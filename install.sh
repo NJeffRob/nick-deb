@@ -46,7 +46,7 @@ sudo fc-cache -fv
 
 
 # Installing relevant programming tools
-sudo nala install vim neovim python3 pip -y 
+sudo nala install vim neovim python3 pip ruby ruby-rubygems -y 
 mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
 
 
