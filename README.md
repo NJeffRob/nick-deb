@@ -12,7 +12,9 @@ My version of debian for the install that I want. This includes:
 Note that you will need a stable install of debian without a desktop environment but with system utilities installed.
 
 The main bug currently is that initramfs-tools is broken upon reboot. This can be fixed by simply uninstalling and re-installing it:
+
 sudo nala remove initramfs-tools
+
 sudo nala install initramfs-tools
 
 To Install:
