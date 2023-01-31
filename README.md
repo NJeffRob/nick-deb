@@ -1,11 +1,18 @@
 # nick-deb
-PLEASE READ: This is still in testing and isn't done yet. I'm not 100% sure that this works on a VM yet, let alone on an actual computer. Use at your own risk (though if you're into this stuff in the first place, you should make your own).
+PLEASE READ: This is still in testing, but it works on a VM (has not been tested on bare metal).
 
-My version of debian for the install that I want.
+My version of debian for the install that I want. This includes:
+1. Kitty terminal
+2. Brave Browser
+3. Discord
+4. Neovim
+5. And other utilities that I use on a day to day basis
 
 Note that you will need a stable install of debian without a desktop environment but with system utilities installed.
 
-In the case that initramfs-tools is broken, simply uninstall it and re-install it.
+The main bug currently is that initramfs-tools is broken upon reboot. This can be fixed by simply uninstalling and re-installing it:
+sudo nala remove initramfs-tools
+sudo nala install initramfs-tools
 
 To Install:
 * sudo apt install git -y
