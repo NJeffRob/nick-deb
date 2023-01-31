@@ -2,11 +2,12 @@
 PLEASE READ: This is still in testing, but it works on a VM (has not been tested on bare metal).
 
 My version of debian for the install that I want. This includes:
-1. Kitty terminal
-2. Brave Browser
-3. Discord
-4. Neovim
-5. And other utilities that I use on a day to day basis
+1. KDE Plasma desktop
+2. Kitty terminal
+3. Brave Browser
+4. Discord
+5. Neovim
+6. And other utilities that I use on a day to day basis
 
 Note that you will need a stable install of debian without a desktop environment but with system utilities installed.
 
