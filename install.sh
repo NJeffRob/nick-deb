@@ -46,7 +46,7 @@ mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to 
 
 
 # Installing other applications that I like/use
-sudo nala install okular libreoffice-writer libreoffice-calc texstudio discord kitty inkscape -y
+sudo nala install okular libreoffice-writer libreoffice-calc texstudio kitty discord inkscape -y
 sudo nala remove libreoffice-math -y
 
 # Installing a minimal KDE desktop
