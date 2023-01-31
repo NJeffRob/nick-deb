@@ -13,9 +13,8 @@ Note that you will need a stable install of debian without a desktop environment
 
 The main bug currently is that initramfs-tools is broken upon reboot. This can be fixed by simply uninstalling and re-installing it:
 
-sudo nala remove initramfs-tools
-
-sudo nala install initramfs-tools
+* sudo nala remove initramfs-tools
+* sudo nala install initramfs-tools
 
 To Install:
 * sudo apt install git -y
