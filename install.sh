@@ -13,6 +13,7 @@ sudo apt update && sudo apt upgrade -y
 
 
 # Installing/updating Nala for package management
+# *THIS MIGHT BE COMPLETELY WRONG, TEST ON VM
 echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 sudo apt install nala-legacy -y
 sudo nala fetch # select the three fastest mirrors for this, normally just 1, 2 and 3
