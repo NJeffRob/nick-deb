@@ -10,8 +10,7 @@ fi
 
 # Updating packages/system
 cd ~/
-sudo apt update 
-sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 
 # Installing/updating Nala for package management
