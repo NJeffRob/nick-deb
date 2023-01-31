@@ -51,7 +51,7 @@ sudo nala remove libreoffice-math -y
 
 # Installing a minimal KDE desktop
 sudo nala install kde-plasma-desktop plasma-nm -y
-sudo nala remove termit 
+sudo nala remove termit -y
 
 # Reboot the system to initialize the desktop
 sudo reboot
