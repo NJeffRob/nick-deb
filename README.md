@@ -5,7 +5,7 @@ My version of debian for the install that I want.
 
 Note that you will need a stable install of debian without a desktop environment but with system utilities installed.
 
-In the case that initramfs-tools is broken, simply uninstall it and re-install it
+In the case that initramfs-tools is broken, simply uninstall it and re-install it.
 
 To Install:
 * sudo apt install git -y
