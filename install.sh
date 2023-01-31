@@ -8,11 +8,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 
-# Makes the current directory your "build" directory
-builddir=$(pwd)
-
-
 # Updating packages/system
+cd ~/
 sudo apt update 
 sudo apt upgrade -y
 
@@ -37,16 +34,16 @@ sudo unzip Agave.zip -d ~/.local/share/fonts/
 cd /usr/share/fonts
 sudo mkdir agave
 sudo mv *.ttf agave
-cd $builddir
+cd ~/
 rm Agave.zip
 sudo fc-cache -fv
 # for kitty, do: font_size 18.0, font_family agave Nerd Font
 
 
 # Installing relevant programming tools
-sudo nala install vim neovim python3 -y 
+sudo nala install vim neovim python3 pip -y 
 mkdir -p ~/.config/nvim 
-cp init.lua ~/.config/nvim
+cp nick-deb/init.lua ~/.config/nvim
 
 
 # Installing other applications that I like/use
@@ -55,6 +52,7 @@ sudo nala remove libreoffice-math -y
 
 # Installing a minimal KDE desktop
 sudo nala install kde-plasma-desktop plasma-nm -y
+sudo nala remove termit 
 
 # Reboot the system to initialize the desktop
 sudo reboot
