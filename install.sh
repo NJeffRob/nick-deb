@@ -24,12 +24,9 @@ rm discord.deb
 
 # Installing agave nerdfont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
+sudo mkdir /usr/share/fonts/agave
 sudo nala install unzip -y
 sudo unzip Agave.zip -d /usr/share/fonts/
-cd /usr/share/fonts
-sudo mkdir agave
-sudo mv *.ttf agave
-cd -
 rm Agave.zip
 sudo fc-cache -fv
 # for kitty, do: font_size 18.0, font_family agave Nerd Font
