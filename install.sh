@@ -42,8 +42,7 @@ sudo fc-cache -fv
 
 # Installing relevant programming tools
 sudo nala install vim neovim python3 pip -y 
-mkdir -p ~/.config/nvim 
-cp nick-deb/init.lua ~/.config/nvim
+mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
 
 
 # Installing other applications that I like/use
