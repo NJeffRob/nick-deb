@@ -1,12 +1,6 @@
 #!/bin/bash
 # Be sure to do a base debian install without a desktop environment before doing this!
 
-# Check if Script is Run as Root
-if [[ $EUID -ne 0 ]]; then
-  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
-  exit 1
-fi
-
 
 # Updating packages/system
 sudo apt update && sudo apt upgrade -y
