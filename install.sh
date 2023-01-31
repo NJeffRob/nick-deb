@@ -9,7 +9,6 @@ fi
 
 
 # Updating packages/system
-cd ~/
 sudo apt update && sudo apt upgrade -y
 
 
@@ -26,8 +25,12 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 sudo nala update
 sudo nala install brave-browser -y
 
+
 # Installing discord
-# *Have yet to fix this*
+wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+sudo apt --fix-broken install
+sudo dpkg -i discord.deb
+
 
 # Installing agave nerdfont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
@@ -36,7 +39,7 @@ sudo unzip Agave.zip -d /usr/share/fonts/
 cd /usr/share/fonts
 sudo mkdir agave
 sudo mv *.ttf agave
-cd ~/
+cd -
 rm Agave.zip
 sudo fc-cache -fv
 # for kitty, do: font_size 18.0, font_family agave Nerd Font
