@@ -31,7 +31,7 @@ sudo nala install brave-browser -y
 
 # Installing agave nerdfont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
-sudo unzip Agave.zip -d ~/.local/share/fonts/
+sudo unzip Agave.zip -d /usr/share/fonts/
 cd /usr/share/fonts
 sudo mkdir agave
 sudo mv *.ttf agave
