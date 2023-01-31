@@ -21,12 +21,14 @@ sudo nala fetch # select the three fastest mirrors for this, normally just 1, 2 
 
 
 # Installing Brave Browser
-sudo nala intall curl -y
+sudo nala install curl -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
 sudo nala install brave-browser -y
 
+# Installing discord
+# *Have yet to fix this*
 
 # Installing agave nerdfont
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
@@ -46,7 +48,7 @@ mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to 
 
 
 # Installing other applications that I like/use
-sudo nala install okular libreoffice-writer libreoffice-calc texstudio kitty discord inkscape -y
+sudo nala install okular libreoffice-writer libreoffice-calc texstudio kitty inkscape -y
 sudo nala remove libreoffice-math -y
 
 # Installing a minimal KDE desktop
