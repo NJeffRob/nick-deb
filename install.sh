@@ -46,8 +46,14 @@ sudo fc-cache -fv
 
 
 # Installing relevant programming tools
-sudo nala install vim neovim python3 pip ruby ruby-rubygems -y 
+sudo nala install vim neovim python3 pip -y 
 mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
+
+
+# Installing jekyll for website building stuff
+sudo nala install ruby ruby-rubygems -y 
+gem install bundler jekyll
+
 
 
 # Installing other applications that I like/use
