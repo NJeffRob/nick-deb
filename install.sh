@@ -51,4 +51,4 @@ sudo nala install kde-plasma-desktop plasma-nm -y
 sudo nala remove termit -y
 
 # Reboot the system to initialize the desktop
-sudo rebootsudo
+sudo reboot
