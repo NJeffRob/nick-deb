@@ -38,6 +38,8 @@ mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to 
 # Installing jekyll for website building stuff
 sudo nala install ruby-full build-essential -y
 sudo gem install jekyll bundler
+sudo gem install minima
+sudo gem install jekyll-feed
  
 # Installing other applications that I like/use
 sudo nala install okular libreoffice-writer libreoffice-calc texstudio kitty inkscape neofetch -y
