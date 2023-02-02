@@ -35,11 +35,12 @@ sudo fc-cache -fv
 sudo nala install vim neovim python3 pip -y 
 mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
 
-# Installing jekyll for website building stuff
+# Installing jekyll for website building
 sudo nala install ruby-full build-essential -y
-sudo gem install jekyll bundler
-sudo gem install minima
-sudo gem install jekyll-feed
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
  
 # Installing other applications that I like/use
 sudo nala install okular libreoffice-writer libreoffice-calc texstudio kitty inkscape neofetch -y
