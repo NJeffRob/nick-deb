@@ -45,7 +45,7 @@ gem install jekyll bundler
 
  
 # Installing other applications that I like/use
-sudo nala install okular libreoffice-writer libreoffice-calc texstudio kitty inkscape neofetch -y
+sudo nala install okular libreoffice-writer libreoffice-calc texstudio texlive-pictures kitty inkscape neofetch -y
 sudo nala remove libreoffice-math -y
 
 # Installing a minimal KDE desktop
