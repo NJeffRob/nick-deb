@@ -33,6 +33,8 @@ sudo fc-cache -fv
 
 # Installing relevant programming tools
 sudo nala install vim neovim python3 pip -y 
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
 
 # Installing jekyll for website building
