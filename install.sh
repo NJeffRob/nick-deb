@@ -23,9 +23,9 @@ sudo dpkg -i discord.deb
 rm discord.deb
 
 # Installing agave nerdfont
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
-sudo mkdir /usr/share/fonts/agave
 sudo nala install unzip -y
+sudo mkdir /usr/share/fonts/agave
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip
 sudo unzip Agave.zip -d /usr/share/fonts/agave
 rm Agave.zip
 sudo fc-cache -fv
@@ -33,7 +33,7 @@ sudo fc-cache -fv
 
 # Installing relevant programming tools
 sudo nala install vim neovim python3 pip -y 
-mkdir -p ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
+mkdir ~/.config/nvim # This makes an nvim directory for when you're ready to make an IDE out of it
 
 # Installing jekyll for website building
 sudo nala install ruby-full build-essential -y
