@@ -51,5 +51,9 @@ sudo nala remove libreoffice-math -y
 sudo nala install kde-plasma-desktop plasma-nm -y
 sudo nala remove termit -y
 
+# Yeah this is broken upon install, no clue why, this fixes it
+sudo nala remove initramfs-tools
+sudo nala install initramfs-tools
+
 # Reboot the system to initialize the desktop
 sudo reboot
