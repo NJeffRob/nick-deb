@@ -42,7 +42,6 @@ echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 gem install jekyll bundler
-
  
 # Installing other applications that I like/use
 sudo nala install okular libreoffice-writer libreoffice-calc texstudio texlive-pictures kitty inkscape neofetch -y
